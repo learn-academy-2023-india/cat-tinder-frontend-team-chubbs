@@ -30,7 +30,7 @@ describe("<CatNew />", () => {
               <CatNew />
           </BrowserRouter>
         )
-        const catNewEnjoy = screen.getByPlaceholderText(/what do you enjoy/i)
+        const catNewEnjoy = screen.getByPlaceholderText(/minimum characters 10/i)
         expect(catNewEnjoy).toBeInTheDocument()
       })
       
@@ -40,7 +40,7 @@ describe("<CatNew />", () => {
               <CatNew />
           </BrowserRouter>
         )
-        const catNewEnjoy = screen.getByPlaceholderText(/url goes here/i)
+        const catNewEnjoy = screen.getByPlaceholderText(/URL goes here/i)
         expect(catNewEnjoy).toBeInTheDocument()
       })
   })

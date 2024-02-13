@@ -13,7 +13,6 @@ const Header = () => {
             />
             <Nav>
                 <RouterNavLink to="/" className="nav-link"> Home </RouterNavLink>
-
                 <RouterNavLink to="/catindex" className="nav-link">
                     Meet All the Cats
                 </RouterNavLink>

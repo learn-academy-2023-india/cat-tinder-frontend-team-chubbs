@@ -35,6 +35,12 @@ const App = () => {
       .then(() => readCat())
       .catch((errors) => console.log("Cat create errors:", errors))
   }
+
+  const updateCatProfile = (cat, id ) => {
+
+    // console.log(cat)
+    // console.log(id)
+  }
   return (
     <>
       < Header />
@@ -43,7 +49,7 @@ const App = () => {
         <Route path="/catindex" element={<CatIndex cats={cats} />} />
         <Route path="/catshow/:id" element={<CatShow cats={cats} />} />
         <Route path="/catnew" element={<CatNew createCat={createCat} />} />
-        <Route path="/catedit" element={<CatEdit />} />
+        <Route path="/catedit/:id" element={<CatEdit updateCatProfile={updateCatProfile} cats={cats} />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       < Footer />

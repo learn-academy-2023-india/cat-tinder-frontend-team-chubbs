@@ -10,7 +10,7 @@ describe("<App />", () => {
         <App />
       </BrowserRouter>
     )
-    const image = screen.getByRole('img')
+    const image = screen.getAllBy('img')
     expect(image).toHaveAttribute("src", Kurrin)
   })
 })
