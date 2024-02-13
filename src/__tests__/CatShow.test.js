@@ -1,21 +1,21 @@
 import { render, screen } from '@testing-library/react'
 import { MemoryRouter, Routes, Route } from "react-router-dom";
 import CatShow from '../Pages/CatShow'
-import mockCats from '../mockCats'
 
 
 describe("<CatShow />", () => {
 
-    it("renders single cat", () => {
+    it("renders single cat", (cats) => {
       const cat = "1";
       render(
         <MemoryRouter initialEntries={[`/catshow/${cat}`]}>
           <Routes>
-            <Route path="catshow/:id" element={<CatShow cats={mockCats} />} />
+            <Route path="catshow/:id" element={<CatShow cats={cats} />} />
           </Routes>
         </MemoryRouter>
       )
-      const catName = screen.getByText(mockCats[0].name)
+      screen.logTestingPlaygroundURL()
+      const catName = screen.getByText(cats.name)
       expect(catName).toBeInTheDocument()
     })
   })
